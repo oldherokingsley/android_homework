@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Ex02Activity!</string>
+    <string name="app_name">Ex02</string>
+    <string-array name="string_array">
+        <item>计应</item>
+        <item>通软</item>
+        <item>数媒</item>
+        <item>嵌软</item>
+        <item>电政</item>
+    </string-array>
+</resources>
