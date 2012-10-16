@@ -1,0 +1,66 @@
+package txx.sysu;
+
+import android.app.Activity;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class Ex03Activity extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        ImageButton imagebtn = (ImageButton) findViewById(R.id.imageButton1);
+        imagebtn.setImageDrawable(getResources().getDrawable(R.drawable.ic_launcher));
+        
+
+        LinearLayout ll  = (LinearLayout) findViewById(R.id.main);
+        TextView tv = new TextView(this);
+        tv.setText("¶¯Ì¬Ìí¼Ó");
+        ll.addView(tv);
+        
+    }
+    public Object tmpImage = null;
+    public void iamgeButtonClick(View v)
+    {
+    	
+    	
+    	TextView userID = (TextView) findViewById(R.id.editText1);
+    	TextView userPwd = (TextView) findViewById(R.id.editText2);
+    	ImageButton imagebtn = (ImageButton) findViewById(R.id.imageButton1);
+    	
+    	String s_uid = userID.getText().toString();
+    	String s_pwd = userPwd.getText().toString();
+    	
+    	if (tmpImage == null)
+    	{
+    		tmpImage = imagebtn.getDrawable(); 
+    	}
+    	
+    	if (s_uid.equals("android") && s_pwd.equals("b403"))
+    	{
+    		imagebtn.setImageDrawable(getResources().getDrawable(R.drawable.ex03state1));
+    	}
+    	else
+    	{
+    		imagebtn.setImageDrawable(getResources().getDrawable(R.drawable.ex03state2));
+    	}
+    }
+    
+    public void cleanBtnClick(View v)
+    {
+    	TextView userID = (TextView) findViewById(R.id.editText1);
+    	TextView userPwd = (TextView) findViewById(R.id.editText2);
+    	ImageButton imagebtn = (ImageButton) findViewById(R.id.imageButton1);
+    	
+    	userID.setText("");
+    	userPwd.setText("");
+    	
+    	
+    	imagebtn.setImageDrawable(getResources().getDrawable(R.drawable.ic_launcher));
+    }
+}

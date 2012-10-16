@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1">
+    <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+        <ImageView android:src="@drawable/icon" android:id="@+id/imageView1" android:layout_width="86dp" android:layout_height="131dp"></ImageView>
+        <LinearLayout android:id="@+id/linearLayout2" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="129dp">
+            <Spinner android:id="@+id/spinner1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:entries="@array/string_array"></Spinner>
+            <EditText android:layout_height="40dp" android:layout_width="fill_parent" android:id="@+id/editText1" android:hint="学号">
+                <requestFocus></requestFocus>
+            </EditText>
+            <EditText android:layout_height="40dp" android:layout_width="fill_parent" android:id="@+id/editText2" android:hint="姓名"></EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayout3" android:orientation="vertical">
+        <TextView android:text="选择你的性别" android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="13.14" android:textColor="#075662" android:textSize="10pt"></TextView>
+        <LinearLayout android:layout_width="fill_parent" android:id="@+id/linearLayout4" android:weightSum="1" android:layout_weight="1" android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/radioButton1" android:layout_height="wrap_content" android:text="女" android:layout_width="wrap_content" android:layout_weight="0.55" android:checked ="true"></RadioButton>
+            <RadioButton android:id="@+id/radioButton2" android:layout_height="wrap_content" android:text="男" android:layout_width="wrap_content"></RadioButton>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:text="选择你的生日" android:id="@+id/textView2" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="0.06" android:layout_gravity="top" android:textColor="#075662" android:textSize="10pt"></TextView>
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayout5">
+        <DatePicker android:layout_height="wrap_content" android:id="@+id/datePicker1" android:layout_width="fill_parent" android:layout_gravity="center"></DatePicker>
+    </LinearLayout>
+    <LinearLayout android:weightSum="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayout6" android:layout_gravity="center">
+        <Button android:layout_height="wrap_content" android:text="确定" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_weight="0.46" android:layout_gravity="center" android:textColor="#B57986"></Button>
+        <Button android:layout_height="wrap_content" android:text="取消" android:id="@+id/button2" android:layout_width="wrap_content" android:layout_weight="0.50" android:layout_gravity="center" android:textColor="#B57986"></Button>
+    </LinearLayout>
+</LinearLayout>

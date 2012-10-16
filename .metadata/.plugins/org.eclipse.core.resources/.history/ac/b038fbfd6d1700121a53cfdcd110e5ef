@@ -1,0 +1,6 @@
+package txx.sysu;
+
+public class test {
+	Button button = (Button) findViewById(R.id.button1);
+			
+}
